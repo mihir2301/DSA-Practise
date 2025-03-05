@@ -104,6 +104,12 @@ void DeleteNode(node* &head,node* &tail,int position){
         n++;
     }
     if(n==position){
+    if(curr->next==NULL){
+        prev->next=curr->next;
+        tail=prev;
+        delete curr;
+        return;
+    }
     prev->next=curr->next;
     cout<<"DELETED NODE IS :"<<curr->data<<endl;
     delete curr;
