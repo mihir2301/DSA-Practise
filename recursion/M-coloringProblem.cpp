@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool val(int ind,int n,vector<vector<int>>g,int colors[]){
+bool val(int ind,int n,vector<vector<int>>g,int colors[],int i){
 for(int k=0;k<n;k++){
-    if(k!=ind&&g[k][ind]==1&&colors[ind]!=1)
+    if(k!=ind&&g[k][ind]==1&&colors[ind]!=i)
     return false;
 }
 return true;
@@ -12,7 +12,7 @@ bool Subseq(int ind,int n,int m,int colors[],vector<vector<int>>g){
         return true;
     }
     for(int i=0;i<m;i++){
-        if(val(ind,n,g,colors)){
+        if(val(ind,n,g,colors,i)){
             colors[ind]=i;
             if(Subseq(ind+1,n,m,colors,g))
             return true;
