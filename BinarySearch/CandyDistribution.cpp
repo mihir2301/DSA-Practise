@@ -14,8 +14,10 @@ void BinarySearch(int n,int k,int candies[]){
     while(left<=right){
         int mid=left+(right-left)/2;
         if(bundle(mid,candies,n,k))
-       { result=mid;
-        left=mid+1;}
+       { 
+        result=mid;
+        left=mid+1;
+       }
         else{
         right=mid-1;}
     }
