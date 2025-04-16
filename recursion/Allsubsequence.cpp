@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 void Subseq(int i,int n,int a[],vector<int>&sub){
-    if(i>=n){
+    if(i==n){
         for(auto i:sub){
             cout<<i<<" ";
         }
